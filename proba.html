@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Domagoj Hajdukovic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  <style>
+    section {
+        padding: 30px 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="container mt-5"> <div class="row d-flex justify-content-center"> <div class="col-md-6"> <div class="card p-3 px-4"> <div class="d-flex justify-content-between align-items-center mb-3"> <span class="text-line me-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span> <button onclick="copy('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod','#copy_button_1')" id="copy_button_1" class="btn btn-sm btn-success copy-button">Copy</button> </div> <div class="d-flex justify-content-between align-items-center mb-3"> <span class="text-line me-2">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> <button onclick="copy('Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.','#copy_button_2')" id="copy_button_2" class="btn btn-sm btn-success copy-button">Copy</button> </div> <div class="d-flex justify-content-between align-items-center mb-3"> <span class="text-line me-2">Duis aute irure dolor in reprehenderit in voluptate velit</span> <button onclick="copy('Duis aute irure dolor in reprehenderit in voluptate velit','#copy_button_3')" id="copy_button_3" class="btn btn-sm btn-success copy-button">Copy</button> </div> <div class="d-flex justify-content-between align-items-center mb-3"> <span class="text-line me-2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</span> <button onclick="copy('Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.','#copy_button_4')" id="copy_button_4" class="btn btn-sm btn-success copy-button">Copy</button> </div> <div class="d-flex justify-content-between align-items-center mb-3"> <span class="text-line me-2">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> <button onclick="copy('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod','#copy_button_5')" id="copy_button_5" class="btn btn-sm btn-success copy-button">Copy</button> </div> </div> </div> </div> </div>
+
+    <script>
+        function copy(text, target) {
+    setTimeout(function() {
+    $('#copied_tip').remove();
+    }, 800);
+    $(target).append("<div class='tip' id='copied_tip'>Copied!</div>");
+    var input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    var result = document.execCommand('copy');
+    document.body.removeChild(input)
+    return result;
+    }
+    </script>
+</body>
+</html>
