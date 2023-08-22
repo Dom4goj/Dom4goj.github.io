@@ -1,14 +1,89 @@
-<html>
-    <head>
-        <script>
-        function copyText() {
-      navigator.clipboard.writeText
-          ("0919591969");
-          alert("Copied phone number!");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Style for the modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
   }
-              </script>
-    </head>
-    <body>
-        <button onclick="copyText()">Copy</button>
-    </body>
+
+  /* Style for the modal content */
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /* Style for the close button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Zoom effect on hover */
+  .thumbnail {
+    transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+  }
+
+  .thumbnail:hover {
+    transform: scale(1.2); /* Adjust the scale factor for desired zoom level */
+  }
+</style>
+</head>
+<body>
+
+<!-- Trigger the modal with an image -->
+<img class="thumbnail" src="image1.png" alt="Image 1" style="width:100%;max-width:300px">
+<img class="thumbnail" src="image2.png" alt="Image 2" style="width:100%;max-width:300px">
+<!-- Add more thumbnail images as needed -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage" style="background-color: transparent;">
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var modalImage = document.getElementById("modalImage");
+
+// Function to open the modal with the selected image
+function openModal(imageSrc) {
+  modal.style.display = "block";
+  modalImage.src = imageSrc;
+  modalImage.style.removeProperty('background-color'); // Remove any background color
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Attach click event to the thumbnail images to open the modal with different images
+var thumbnails = document.querySelectorAll(".thumbnail");
+thumbnails.forEach(function(thumbnail) {
+  thumbnail.addEventListener("click", function() {
+    openModal(thumbnail.src);
+  });
+});
+</script>
+
+</body>
 </html>

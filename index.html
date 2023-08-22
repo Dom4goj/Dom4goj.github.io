@@ -5,12 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Domagoj Hajdukovic</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -95,9 +92,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>.
         <div class="col-11 col-lg-6 text-center d-lg-block">
-          <img class="img-fluid zoom" src="/assets/whatsapp portfolio.png" alt="whatsapp">
+          <img class="img-fluid thumbnail" src="/assets/whatsapp portfolio.png" alt="whatsapp">
+          <div id="myModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+          </div>
         </div>
       </div>
     </div>
@@ -141,7 +142,11 @@
           </div>
         </div>
         <div class="col-11 col-lg-6 text-center d-lg-block">
-          <img class="img-fluid zoom" src="/assets/landing page.png" alt="landingpage">
+          <img class="img-fluid thumbnail" onclick="openModal2()" src="/assets/landing page.png" alt="landingpage">
+          <div id="myModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+          </div>
         </div>
       </div>
     </div>
@@ -186,7 +191,11 @@
           </div>
         </div>
         <div class="col-11 col-lg-6 text-center d-md-block">
-          <img class="img-fluid zoom" src="/assets/pricing plans.png" alt="plans">
+          <img class="img-fluid thumbnail" src="/assets/pricing plans.png" alt="plans">
+        </div>
+        <div id="myModal" class="modal" onclick="closeModal()">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modalImage">
         </div>
       </div>
     </div>
@@ -232,7 +241,11 @@
           </div>
         </div>
         <div class="col-11 col-lg-6 text-center d-md-block">
-          <img class="img-fluid zoom" src="/assets/cartpages.png" alt="payment">
+          <img class="img-fluid thumbnail" src="/assets/cartpages.png" alt="payment">
+          <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+          </div>
         </div>
       </div>
     </div>
@@ -280,6 +293,10 @@
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+  <script src="js/about.js"></script>
 </body>
 
 </html>
