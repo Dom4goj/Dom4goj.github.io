@@ -3,87 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  /* Style for the modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-
-  /* Style for the modal content */
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-  }
-
-  /* Style for the close button */
-  .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  /* Zoom effect on hover */
-  .thumbnail {
-    transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
-  }
-
-  .thumbnail:hover {
-    transform: scale(1.2); /* Adjust the scale factor for desired zoom level */
-  }
-</style>
 </head>
 <body>
 
-<!-- Trigger the modal with an image -->
-<img class="thumbnail" src="image1.png" alt="Image 1" style="width:100%;max-width:300px">
-<img class="thumbnail" src="image2.png" alt="Image 2" style="width:100%;max-width:300px">
-<!-- Add more thumbnail images as needed -->
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage" style="background-color: transparent;">
-</div>
-
-<script>
-var modal = document.getElementById("myModal");
-var modalImage = document.getElementById("modalImage");
-
-// Function to open the modal with the selected image
-function openModal(imageSrc) {
-  modal.style.display = "block";
-  modalImage.src = imageSrc;
-  modalImage.style.removeProperty('background-color'); // Remove any background color
-}
-
-// Function to close the modal
-function closeModal() {
-  modal.style.display = "none";
-}
-
-// Attach click event to the thumbnail images to open the modal with different images
-var thumbnails = document.querySelectorAll(".thumbnail");
-thumbnails.forEach(function(thumbnail) {
-  thumbnail.addEventListener("click", function() {
-    openModal(thumbnail.src);
-  });
-});
-</script>
+  <section id="cv" class="py-3 pt-5 mt-5">
+    <div class="container-lg">
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-11 col-lg-11 text-start">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">I am Domagoj Hajduković. As a dedicated and creative UX/UI designer, I am passionate about crafting
+              intuitive and visually appealing digital experiences. With a strong foundation in graphic design, which I
+              began studying in 2015 at the School of Applied Arts and Design Osijek, and my graduation in 2019 as one of
+              the top graduates, I have honed my skills and expanded my expertise to include User Experience and User
+              Interface design. My journey led me to successfully completing a specialized UX/UI designer course in July
+              2023. My goal is to merge my artistic sensibilities with user-centric design principles to create impactful
+              solutions.</li>
+            <li class="list-group-item">
+              <strong>Education:</strong>
+              <br><br>
+              Graphic Design<br>
+              <i>School of Applied Arts and Design Osijek<br>
+              2015-2019<br>
+              -Graduated with top results of the year 2019<br><br>
+              UX/UI Design<br></i>
+              Algebra University College<br>
+              <i>Feb 2023-Jul 2023</i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cv2" class="pe-3">
+    <div class="container-lg">
+      <div class="row justify-content-center">
+        <div class="col-11 col-lg-11 text-start">
+          <p class="me-4">
+            <strong>Work and Skills:</strong><br><br>
+            Upon completing my studies in 2019, I immediately embarked on a career as a graphic designer at Print-studio
+            Osijek, where I further developed my skill set:
+            <br><br>
+            - Proficient in CorelDRAW, Photoshop, Illustrator, and InDesign<br>
+            - Exceptional eye for detail and composition, refining designs for both print and digital platforms<br>
+            - Collaborative mindset, working effectively in a team to achieve project goals and meet tight deadlines<br>
+            - Effective communication skills, ensuring client satisfaction by understanding and translating their
+            vision<br>
+            - Print-Ready Design: Mastery of print-ready design ensures that my creations translate seamlessly from the
+            digital realm to tangible media, maintaining visual integrity.
+          </p>
+          <p class="my-4">
+            My work experience helped me develop a strong foundation in design principles and tools. Collaborating
+            within teams and effectively communicating with clients to bring their visions to life became second nature.
+            Recognizing the evolving landscape of design, I embarked on a journey to expand my skills into the realm of
+            UX/UI design.<br><br>
+            My pursuit of enhancing my capabilities led me to undertake a UX/UI designer course in 2023. I further
+            expanded my
+            skill set to encompass user-centered design principles and digital interactivity:<br><br>
+            - Proficiency in wireframing and prototyping tools such as Adobe XD and Figma<br>
+            - Deep understanding of user psychology and behavior, enabling me to create designs that resonate with
+            target audiences<br>
+            - UX Research: Delving into user psychology and behavior, I am equipped to infuse my designs with empathy
+            and an innate understanding of user needs.<br>
+            - Storyboarding and User Journeys: I honed my ability to visualize user interactions and experiences,
+            facilitating the creation of designs that resonate deeply.
+          </p>
+          <p class="my-4">
+            <strong>Beyond design paradigms, my technical skills include:</strong><br><br>
+            - Responsive Design: Ensuring seamless experiences across diverse devices through responsive design
+            principles.<br>
+            - Front-End Development: I delved into online courses including HTML, CSS, and basic JavaScript courses,
+            crafting a personal website using Bootstrap. Recently, I am delving into Angular for a personal project.
+          </p>
+          <p class="my-4">
+            Collaboration fuels my creativity, and I am excited about the prospect of joining a team of fellow designers
+            and developers. I have a unique ability to identify user experience opportunities in everyday life, and I
+            relish brainstorming sessions with friends to solve common pain points of products we use daily.
+          </p>
+          <p class="my-4">
+            <strong>Projects:</strong><br><br>
+            - Ferivi Webshop Enhancement:<br>
+            Collaborated with the Ferivi team to edit webshop images and design eye-catching flyers, contributing to a
+            more engaging online shopping experience for customers. This project taught me the importance of aligning
+            visuals with user needs to drive conversion rates.
+            <br><br>
+            - Čazma Natura Information Tables:<br>
+            Helped design information tables for Čazma Natura, creating clear and accessible communication of vital
+            information. This project highlighted the significance of information hierarchy and the role of design in
+            enhancing communication.
+            <br><br>
+            - Croatian Lottery Campaign:<br>
+            Contributed to the Croatian Lottery campaign, producing visually striking graphics that captured the essence
+            of the promotion. This experience reinforced my ability to adapt designs to fit specific brand identities
+            and campaign goals.
+          </p>
+          <p class="my-4">
+            <strong>References:</strong><br><br>
+            I have references available from my time at Print-studio Osijek. Please feel free to contact them for
+            details.<br><br>
+            PRINT-STUDIO OSIJEK<br>
+            Ivan Jovanović<br>
+            +385 91 545 4797
+          </p>
+          <p class="my-4">
+            <strong>Career Goals:</strong><br><br>
+            My ambition as a UX/UI designer is to continue crafting exceptional user experiences that seamlessly blend
+            aesthetics and functionality. My graphic design background, coupled with my recent UX/UI education, equips
+            me to design with empathy and insight, ultimately enhancing user satisfaction. By leveraging my design
+            skills, technical expertise, and understanding of user behavior, I aim to contribute meaningfully to a
+            dynamic design team, enriching the products and services we create.<br><br>
+            I am excited to join a collaborative team where I can learn, grow, and make a positive impact through
+            innovative and user-centered design solutions. My dual proficiency in graphic and UX/UI design, coupled with
+            my passion for continuous learning, makes me a valuable asset to any project that prioritizes delivering
+            exceptional user experiences.<br><br>
+            Ultimately, I aspire to shape the future of design by contributing to projects that redefine industry
+            standards. My proficiency in graphic and UX/UI design, coupled with my fervent dedication to continuous
+            learning, substantiates my promise as a valuable asset to any team that values delivering exceptional user
+            experiences.
+          </p>
+          <p class="my-4 fst-italic">
+            Thank you in for your time.<br>
+            Domagoj Hajduković
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
